@@ -12,10 +12,10 @@ class ContactTypeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var contactTypeImageView: UIImageView!
     
     @IBOutlet weak var contactTypeTitleLabel: UILabel!
-   
+    
     func setup(with contact: ContactModel) {
-            contactTypeImageView.image = contact.image
-           contactTypeTitleLabel.text = contact.name
-        }
- 
+        contactTypeImageView.image = contact.image
+        contactTypeTitleLabel.text = contact.name
+    }
+    
 }

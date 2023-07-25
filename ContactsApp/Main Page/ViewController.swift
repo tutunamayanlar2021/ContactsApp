@@ -34,8 +34,8 @@ class ViewController: UIViewController {
             self.present(vc, animated: true)
         }
     }
-
-
+    
+    
 }
 
 //MARK: - UITableViewDelegate
@@ -51,7 +51,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactsTableViewCell") as! ContactsTableViewCell
         cell.cellLabel.text  = filterContacts(indexPath.section)[indexPath.row].name
         cell.cellImageView.image = filterContacts(indexPath.section)[indexPath.row].image
@@ -60,24 +60,24 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedContact = filterContacts(indexPath.section)[indexPath.row]
-
+        
         tableView.deselectRow(at: indexPath, animated: true)
         let storyboard = UIStoryboard(name: "DetailViewController", bundle: nil)
         if let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
-            detailVC.filteredContacts = filterContacts(indexPath.section) // Pass the filtered contacts to DetailViewController
-            detailVC.contact = selectedContact // Pass the selected contact to DetailViewController
+            detailVC.filteredContacts = filterContacts(indexPath.section) 
+            detailVC.contact = selectedContact
             navigationController?.pushViewController(detailVC, animated: true)
         }
     }
-
-
-
+    
+    
+    
     private func setSection() -> [Contacts]{
         
         return selectedContactType.map { [$0] } ?? Contacts.allCases
-
+        
     }
-   
+    
     private func filterContacts(_ sectionIndex: Int)-> [ContactModel]{
         let contactType: Contacts = selectedContactType ?? Contacts.allCases[sectionIndex]
         return contacts.filter { $0.contacts == contactType }
@@ -89,10 +89,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
 extension ViewController: PickerViewControllerDelegate{
     func didSelectContact(_ type: Contacts) {
         if type == .allContacts {
-                selectedContactType = nil
-            } else {
-                selectedContactType = type
-            }
+            selectedContactType = nil
+        } else {
+            selectedContactType = type
+        }
     }
     
     

@@ -1,3 +1,5 @@
 # ContactsApp
 
-![AdobeExpress](https://github.com/tutunamayanlar2021/ContactsApp/assets/63172521/712dfb1a-2b1d-4c19-8899-7e07372b8f2c)
+
+https://github.com/tutunamayanlar2021/ContactsApp/assets/63172521/47496ac8-bc8b-4182-9e80-2bcfd1a70185
+

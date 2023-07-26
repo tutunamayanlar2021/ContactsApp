@@ -24,23 +24,43 @@
                                 <rect key="frame" x="0.0" y="642" width="393" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmy-H4-tFm">
-                                        <rect key="frame" x="310" y="8" width="75" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="ZwV-ni-v2c"/>
-                                        </constraints>
+                                        <rect key="frame" x="303" y="8.0000000000000018" width="82" height="20.666666666666671"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Done"/>
                                         <connections>
                                             <action selector="doneButtonAct:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rEd-T2-7kb"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfm-2G-n4X">
+                                        <rect key="frame" x="172" y="8.0000000000000018" width="82" height="20.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePN-qG-5Sl">
+                                        <rect key="frame" x="30" y="8.0000000000000018" width="82" height="20.666666666666671"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelButtonAct:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="auu-ib-xH7"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="mmy-H4-tFm" firstAttribute="top" secondItem="mZS-16-cou" secondAttribute="top" constant="8" id="m9E-mO-T5a"/>
-                                    <constraint firstAttribute="trailing" secondItem="mmy-H4-tFm" secondAttribute="trailing" constant="8" id="pHh-v9-21s"/>
+                                    <constraint firstItem="ePN-qG-5Sl" firstAttribute="centerY" secondItem="Xfm-2G-n4X" secondAttribute="centerY" id="5tL-xm-fLg"/>
+                                    <constraint firstItem="Xfm-2G-n4X" firstAttribute="height" secondItem="ePN-qG-5Sl" secondAttribute="height" id="K9O-Rm-8q6"/>
+                                    <constraint firstItem="ePN-qG-5Sl" firstAttribute="leading" secondItem="mZS-16-cou" secondAttribute="leading" constant="30" id="Nwf-aQ-ff3"/>
+                                    <constraint firstItem="Xfm-2G-n4X" firstAttribute="leading" secondItem="ePN-qG-5Sl" secondAttribute="trailing" constant="60" id="SAq-mX-Owc"/>
+                                    <constraint firstItem="mmy-H4-tFm" firstAttribute="width" secondItem="ePN-qG-5Sl" secondAttribute="width" id="Ybd-Rx-Zpq"/>
+                                    <constraint firstItem="Xfm-2G-n4X" firstAttribute="centerY" secondItem="mmy-H4-tFm" secondAttribute="centerY" id="cYV-Zl-VCG"/>
+                                    <constraint firstItem="ePN-qG-5Sl" firstAttribute="top" secondItem="mZS-16-cou" secondAttribute="topMargin" id="cg1-aQ-2Gj"/>
+                                    <constraint firstItem="Xfm-2G-n4X" firstAttribute="width" secondItem="ePN-qG-5Sl" secondAttribute="width" id="dq8-16-u22"/>
+                                    <constraint firstItem="mmy-H4-tFm" firstAttribute="height" secondItem="ePN-qG-5Sl" secondAttribute="height" id="nNv-bH-wf8"/>
+                                    <constraint firstItem="mmy-H4-tFm" firstAttribute="baseline" secondItem="Xfm-2G-n4X" secondAttribute="firstBaseline" id="s9p-0z-EhR"/>
                                     <constraint firstAttribute="height" constant="50" id="wDM-DP-f0o"/>
-                                    <constraint firstAttribute="bottom" secondItem="mmy-H4-tFm" secondAttribute="bottom" constant="8" id="zkx-gh-pke"/>
+                                    <constraint firstAttribute="trailing" secondItem="mmy-H4-tFm" secondAttribute="trailing" constant="8" id="wP3-1p-dbf"/>
+                                    <constraint firstItem="mmy-H4-tFm" firstAttribute="leading" secondItem="Xfm-2G-n4X" secondAttribute="trailing" constant="49" id="zqW-SW-8px"/>
                                 </constraints>
                             </view>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YRn-10-kdz">
@@ -68,6 +88,7 @@
                     </view>
                     <connections>
                         <outlet property="filterPickerView" destination="YRn-10-kdz" id="HMV-SP-gIX"/>
+                        <outlet property="selectedTitleLabel" destination="Xfm-2G-n4X" id="RM7-rc-Nw5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

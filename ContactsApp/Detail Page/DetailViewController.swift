@@ -22,7 +22,7 @@ class DetailViewController: UIViewController{
         setupUI()
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: 100, height: 150) // Ayarlamak istediğiniz hücre boyutlarına göre değerleri burada değiştirebiliriz
+        layout.itemSize = CGSize(width: 140, height: 150) // Ayarlamak istediğiniz hücre boyutlarına göre değerleri burada değiştirebiliriz
         layout.minimumLineSpacing = 20 // Hücreler arası satır aralığı
         layout.minimumInteritemSpacing = 20 // Hücreler arası sütun aralığı
         cantactTypeCollectionView.collectionViewLayout = layout
